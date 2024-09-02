@@ -8,6 +8,7 @@
 
 body {
     font-family: pica;
+
     .container {
         display: grid;
         grid-template-columns: 350px 1fr;
@@ -34,9 +35,11 @@ body {
                     img {
                         width: 70px;
                     }
-                    .desc{
+
+                    .desc {
                         color: rgb(214, 214, 214);
                     }
+
                     h3 {
                         text-align: end;
                     }
@@ -51,6 +54,7 @@ body {
                         list-style: none;
                         margin-top: 25%;
                         color: #383f45;
+
                         a {
                             text-decoration: none;
                             color: inherit;
@@ -60,7 +64,7 @@ body {
                             display: flex;
                             width: 350px;
                             justify-content: space-between;
-                            padding: 10px 25px;
+                            padding: 20px 25px;
                         }
 
                         span:hover {
@@ -78,7 +82,7 @@ body {
 
         main {
             grid-column: 2/3;
-            grid-row: 1/4;
+            grid-row: 1/7;
             overflow-y: auto;
             height: 100vh;
 
@@ -96,27 +100,86 @@ body {
                 text-shadow: 2px 2px 2px black;
                 mask-image: blur(2px);
             }
-            .propos{
-                padding: 45px;
-                height: 50vh;
+
+            .propos {
+                padding: 60px 45px;
+                height: 60vh;
                 font-size: 1.5rem;
-                h3{
+
+                h3 {
                     text-align: center;
                     padding: 10px;
                 }
             }
-            .stack{
-                height: 50vh;
+
+            .stack {
+                height: auto;
                 display: flex;
                 flex-direction: column;
+                text-align: center;
                 padding: 45px;
-                
-                .comp{
+                gap: 35px;
+
+                h3{
+                    font-size: 1.5rem;
+                }
+                .comp {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
                     gap: 25px;
-                    div{
+
+                    div {
+                        text-align: center;
                         font-size: 105px;
+                    }
+                }
+            }
+
+            .portf {
+                height: 50vh;
+                padding: 45px;
+            }
+
+            .contact {
+                height: 50vh;
+                padding: 45px;
+                display: flex;
+                flex-direction: column;
+                gap: 35px;
+                justify-content: center;
+                align-items: center;
+
+                form {
+                    width: 40vw;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 10px;
+
+                    div {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        gap: 10px;
+                    }
+
+                    input {
+                        border-radius: 7px;
+                    }
+
+                    .btn {
+                        border-radius: 7px;
+                        align-self: center;
+                        width: 100px;
+                        background-color: white;
+                        color: #222629;
+                        transition: 300ms linear;
+                    }
+
+                    .btn:hover {
+                        box-shadow: 1px 1px 1px black;
+                        color: white;
+                        background-color: #383f45;
                     }
                 }
             }
@@ -152,6 +215,7 @@ body {
         }
     }
 }
+
 @font-face {
     font-family: pica;
     src: url("../font/IM_Fell_Double_Pica/IMFellDoublePica-Regular.ttf");
