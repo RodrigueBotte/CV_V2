@@ -7,15 +7,16 @@
 }
 
 body {
+    font-family: pica;
     .container {
         display: grid;
-        grid-template-columns: 370px 1fr;
+        grid-template-columns: 350px 1fr;
         grid-template-rows: 1fr auto 1fr;
         height: 100vh;
 
         header {
-            background-color: burlywood;
-            width: 370px;
+            background-color: #222629;
+            width: 350px;
             height: 90vh;
             position: sticky;
             grid-column: 1/2;
@@ -33,7 +34,9 @@ body {
                     img {
                         width: 70px;
                     }
-
+                    .desc{
+                        color: rgb(214, 214, 214);
+                    }
                     h3 {
                         text-align: end;
                     }
@@ -47,7 +50,7 @@ body {
                         gap: 5px;
                         list-style: none;
                         margin-top: 25%;
-
+                        color: #383f45;
                         a {
                             text-decoration: none;
                             color: inherit;
@@ -55,7 +58,7 @@ body {
 
                         span {
                             display: flex;
-                            width: 370px;
+                            width: 350px;
                             justify-content: space-between;
                             padding: 10px 25px;
                         }
@@ -84,7 +87,7 @@ body {
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                height: 50vh;
+                height: 70vh;
                 font-size: 2.5rem;
                 background-image: url(../../images/shutterstock_535124956-1024x756.jpg);
                 background-size: cover;
@@ -93,20 +96,41 @@ body {
                 text-shadow: 2px 2px 2px black;
                 mask-image: blur(2px);
             }
+            .propos{
+                padding: 45px;
+                height: 50vh;
+                font-size: 1.5rem;
+                h3{
+                    text-align: center;
+                    padding: 10px;
+                }
+            }
             .stack{
-                font-size: 55px;
+                height: 50vh;
+                display: flex;
+                flex-direction: column;
+                padding: 45px;
+                
+                .comp{
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 25px;
+                    div{
+                        font-size: 105px;
+                    }
+                }
             }
         }
 
         footer {
-            width: 370px;
+            width: 350px;
             height: 10vh;
             grid-column: 1/2;
             position: sticky;
             box-sizing: border-box;
             top: 0;
             bottom: 0;
-            background-color: rgb(222, 184, 135);
+            background-color: #222629;
 
             ul {
                 display: flex;
@@ -118,7 +142,7 @@ body {
 
                 i {
                     font-size: 25px;
-                    color: rgb(139, 138, 25);
+                    color: #383f45;
                 }
 
                 i:hover {
@@ -127,5 +151,8 @@ body {
             }
         }
     }
-
+}
+@font-face {
+    font-family: pica;
+    src: url("../font/IM_Fell_Double_Pica/IMFellDoublePica-Regular.ttf");
 }
