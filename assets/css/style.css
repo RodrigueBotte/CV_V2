@@ -86,6 +86,7 @@ body {
         }
 
         main {
+            
             grid-column: 2/3;
             grid-row: 1/3;
             overflow-y: auto;
@@ -147,6 +148,7 @@ body {
             }
 
             .portf {
+                position: relative;
                 height: auto;
                 padding: 45px;
                 display: flex;
@@ -155,7 +157,7 @@ body {
                 align-items: center;
                 gap: 35px;
                 background: linear-gradient(14deg, rgba(255, 255, 255, 1) 0%, rgba(243, 248, 248, 1) 100%);
-
+                
                 .detail {
                     display: flex;
                     flex-direction: row;
@@ -169,7 +171,7 @@ body {
                         gap: 15px;
 
                         img {
-                            width: 80%;
+                            width: 350px;
                         }
 
                         a {
@@ -285,6 +287,31 @@ body {
             }
         }
     }
+}
+
+.boxProj1{
+    position: absolute; /* Fixe l'élément par rapport à la fenêtre */
+    top: 50%;        /* Centre verticalement */
+    left: 50%;       /* Centre horizontalement */
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: auto;
+    background-color: #383f45c4;
+    color: white;
+    z-index: 1000;
+    border: 2px solid white;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 30px;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);  
+    z-index: 9;  
 }
 
 @font-face {
