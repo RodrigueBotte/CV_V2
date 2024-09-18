@@ -171,7 +171,7 @@ body {
                         gap: 15px;
 
                         img {
-                            width: 350px;
+                            width: 20vw;
                         }
 
                         a {
@@ -199,10 +199,13 @@ body {
                         font-size: 1.2rem;
                         text-align: center;
                         img{
-                            width: 350px;
+                            width: 18vw;
                         }
                         div{
                             cursor: pointer;
+                        }
+                        div:hover{
+                            scale: 1.1;
                         }
                     }
                 }
@@ -256,6 +259,9 @@ body {
                     }
                 }
             }
+            .copyright{
+                text-align: center;
+            }
         }
 
         footer {
@@ -296,13 +302,14 @@ body {
     transform: translate(-50%, -50%);
     width: 400px;
     height: auto;
-    background-color: #383f45c4;
+    background-color: #383f45;
     color: white;
     z-index: 1000;
     border: 2px solid white;
     font-size: 1.5rem;
     text-align: center;
     padding: 30px;
+    border-radius: 10px;
 }
 .overlay {
     position: fixed;
@@ -311,10 +318,11 @@ body {
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);  
-    z-index: 9;  
+    z-index: 9; 
 }
 
 @font-face {
     font-family: pica;
     src: url("../font/IM_Fell_Double_Pica/IMFellDoublePica-Regular.ttf");
 }
+
