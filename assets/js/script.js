@@ -1,18 +1,25 @@
 "use strict"
 
-// function mailer() {
-//     emailjs.init("service_ee5ksai");
-//     document.getElementById('contact-form').addEventListener('submit', function(event) {
-//         event.preventDefault(); // Empêcher l'envoi par défaut du formulaire
+document.getElementById('contact').addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêche le rechargement de la page
 
-//         emailjs.sendForm('service_ee5ksai', 'your_template_id', this)
-//             .then(function() {
-//                 alert('Email envoyé avec succès!');
-//             }, function(error) {
-//                 alert('Erreur lors de l\'envoi de l\'email : ' + JSON.stringify(error));
-//             });
-//     });
-// };
+    // Récupérer les informations du formulaire
+    const templateParams = {
+        nom: document.getElementById('nom').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+    };
+
+    // Envoyer l'e-mail
+    emailjs.send('service_ee5ksai', 'template_dvrozr1', templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Message envoyé avec succès !');
+        }, function(error) {
+            console.log('FAILED...', error);
+            alert('Erreur lors de l\'envoi. Réessayez plus tard.');
+        });
+});
 
 const main = document.querySelector('main');
 if (document.querySelector('.headIntro')) {
@@ -45,7 +52,7 @@ scrollEffect('.intro', '.headIntro');
 scrollEffect('.propos', '.headPropos');
 scrollEffect('.stack', '.headStack');
 scrollEffect('.portf', '.headPortf');
-scrollEffect('.contact', '.headContact');
+scrollEffect('#contact', '.headContact');
 
 /**
  * La fonction sert à se déplacer sur la page au click sur le header
@@ -94,6 +101,6 @@ function boxProjet(divProjet, textProjet) {
 }
 
 boxProjet(".proj1", "Projet qui a été créé durant la Nurserie. <br> C'était autour d'un thème d'un voyage en 80 jours et il a été fait avec Html et Css. <br> Nous étions 4 à bosser dessus.")
-boxProjet(".proj2", "Vous êtes actuellement sur la deuxième version de mon portfolio. <br> La première version a été faites durant ma formation. <br> Elle était faites uniquement en Html/Css.")
+boxProjet(".proj2", "Vous êtes actuellement sur la deuxième version de mon portfolio. <br> La première version a été faite durant ma formation. <br> Elle était faite uniquement en Html/Css.")
 boxProjet(".proj3", "Projet de site pour s'inscrire à un tournoi Magic the Gathering. <br> Le but était de retravailler le back-end en faisant un CRUD et créer une base de donnée sur laquelle intéragir. <br> Le site est fait uniquement en PHP.")
 boxProjet(".proj4", "Projet de site autour de l'univers de Destiny 2. <br> Ce site avait pour projet d'aider mon clan in-game afin qu'ils y retrouvent toutes les infos concernant le jeu, les prochains raid organisés ainsi que la possibilité de créer des builds directement sur le site et de les partager. La partie création de build n'est pas encore au point. <br> Le site a été fait avec Angular.")
