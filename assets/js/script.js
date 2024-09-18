@@ -71,8 +71,7 @@ scrollInto('.intro', '.headIntro');
 scrollInto('.propos', '.headPropos');
 scrollInto('.stack', '.headStack');
 scrollInto('.portf', '.headPortf');
-scrollInto('.contact', '.headContact');
-
+scrollInto('.copyright', '.headContact');
 
 function boxProjet(divProjet, textProjet) {
     const proj1 = document.querySelector(divProjet);
