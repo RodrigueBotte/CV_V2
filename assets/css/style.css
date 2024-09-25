@@ -60,12 +60,8 @@ body {
                         margin-top: 25%;
                         color: #383f45;
 
-                        a {
-                            text-decoration: none;
-                            color: inherit;
-                        }
-
                         span {
+                            cursor: pointer;
                             display: flex;
                             width: 350px;
                             justify-content: space-between;
@@ -99,7 +95,7 @@ body {
                 align-items: center;
                 height: 70vh;
                 font-size: 2.5rem;
-                background-image: url(../../images/shutterstock_535124956-1024x756.jpg);
+                background-image: url(../../images/bgTitle.jpg);
                 background-size: cover;
                 background-position: left bottom;
                 color: rgb(255, 255, 255);
@@ -144,7 +140,7 @@ body {
                         font-size: 105px;
 
                         img {
-                            width: 100px;
+                            width: 90px;
                         }
                     }
                 }
@@ -220,9 +216,9 @@ body {
             }
 
             #contact {
-                height: 50vh;
+                height: auto;
                 padding: 45px;
-                margin-bottom: 45px;
+                /* margin-bottom: 45px; */
                 display: flex;
                 flex-direction: column;
                 gap: 35px;
@@ -246,7 +242,7 @@ body {
 
                     input {
                         border-radius: 7px;
-                        padding: 1px 5px;
+                        padding: 2px 5px;
                     }
 
                     .btn {
@@ -270,6 +266,10 @@ body {
                 text-align: center;
                 height: 10vh;
                 background: linear-gradient(14deg, rgba(255, 255, 255, 1) 0%, rgba(243, 248, 248, 1) 100%);
+
+                p {
+                    padding-top: 25px;
+                }
             }
         }
 
@@ -306,11 +306,8 @@ body {
 
 .boxProj1 {
     position: absolute;
-    /* Fixe l'élément par rapport à la fenêtre */
     top: 50%;
-    /* Centre verticalement */
     left: 50%;
-    /* Centre horizontalement */
     transform: translate(-50%, -50%);
     width: 400px;
     height: auto;
@@ -350,7 +347,7 @@ body {
                 .container-header {
                     .profil {
                         flex-direction: column;
-                        font-size: 0.5rem;
+                        font-size: 0.6rem;
                         gap: 10px;
 
                         h3 {
@@ -359,7 +356,7 @@ body {
 
 
                         img {
-                            width: 30px;
+                            width: 50px;
                         }
                     }
 
@@ -479,7 +476,12 @@ body {
 
             main {
                 .intro {
+                    text-align: center;
                     font-size: 1.5rem;
+                }
+
+                .propos {
+                    font-size: 1.2rem;
                 }
 
                 .stack {
@@ -488,9 +490,12 @@ body {
                             font-size: 65px;
                         }
 
-                        img {
-                            width: 50px;
+                        div {
+                            img {
+                                width: 60px;
+                            }
                         }
+
                     }
                 }
 
@@ -499,7 +504,15 @@ body {
                         flex-direction: column;
                         gap: 15px;
 
+                        .cv {
+                            img {
+                                width: 200px;
+                            }
+                        }
+
                         .projet {
+                            grid-template-columns: repeat(1, 1fr);
+
                             img {
                                 width: 200px;
                             }
@@ -520,7 +533,7 @@ body {
 
             footer {
                 width: 70px;
-                height: 11vh;
+                height: 10vh;
 
                 ul {
                     gap: 10px;
@@ -534,5 +547,9 @@ body {
                 }
             }
         }
+    }
+
+    .boxProj1 {
+        width: 300px;
     }
 }
